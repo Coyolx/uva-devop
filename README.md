@@ -3,7 +3,7 @@
 - `Resources` folder contains the exercises.
 
 #### Exercise 01 (Docker, Kubernetes and Swagger)
-- [Link for the Swagger playground](https://app.swaggerhub.com/apis/uva-5f3/Tutorial/1.0.0) (Exercise 01): this code is used to generate the `Python Flask Server Tutorial` folder.
+- [Link for the Swagger playground](https://app.swaggerhub.com/apis/uva-5f3/Tutorial/1.0.0) (Exercise 01): this code is used to generate this repository.
 The folder is generated automatically from Swagger. Two options are available to run Python Flask server:
 1. Run it locally with an environment and IDE of our choice.
 2. Run a containerised server with Docker.
