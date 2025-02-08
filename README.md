@@ -13,7 +13,7 @@ _The tutorial explains it quite well._
 
 ###### Option 2 - Containerised server
 ```sh
-docker build --tag goncaloj/student_service # The "goncaloj" is my Docker username. Find your own.
+docker build --tag goncaloj/student_service # "goncaloj" is my Docker username. Find your own (please).
 # Running it in dettached mode (-d) is optional.
 docker run -it -p -d 8080:8080 goncaloj/student_service
 ```
