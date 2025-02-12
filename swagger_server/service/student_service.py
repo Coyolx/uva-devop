@@ -24,25 +24,20 @@ def add(student=None):
     return student.student_id
 
 
+# def get_by_id(student_id=None, subject=None):
+#     print("oi")
+#     student = student_db.get(doc_id=int(student_id))
+#     if not student:
+#         return 'not found', 404
+#     student['student_id'] = student_id
+#     return student
+
 def get_by_id(student_id=None, subject=None):
     student = student_db.get(doc_id=int(student_id))
     if not student:
-        return 'not found', 404
+        return {'detail': 'Student not found', 'status': 404, 'title': 'Not Found'}, 404
     student['student_id'] = student_id
-    return student
-
-# def get_by_id(student_id=None, subject=None):
-#     try:
-#         student_id = int(student_id)  # Ensure it's an integer
-#     except (TypeError, ValueError):
-#         return 'invalid student ID', 400
-
-#     student = student_db.get(doc_id=student_id)  # Correct way to fetch by document ID
-#     if not student:
-#         return 'Student not found', 404
-
-#     student['student_id'] = student_id  # Ensure the ID is returned in the response
-#     return student
+    return student, 200
 
 
 def delete(student_id=None):
