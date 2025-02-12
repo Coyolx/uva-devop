@@ -21,7 +21,7 @@
 									"tests[\"Response should not be 'do some magic!'\"] = responseBody != \"do some magic!\";",
 									"// pm.globals.set(\"student_id\", responseBody);",
 									"var jsonData = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"student_id\", jsonData);"
+									"postman.setEnvironmentVariable(\"student_id\", jsonData.message.student_id);"
 								],
 								"type": "text/javascript"
 							}
@@ -1169,7 +1169,7 @@
 									"tests[\"Status code is 200\"] = responseCode.code === 200;",
 									"tests[\"Response should not be 'do some magic!'\"] = responseBody != \"do some magic!\";",
 									"var jsonData = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"student_id\", jsonData);",
+									"postman.setEnvironmentVariable(\"student_id\", jsonData.message.student_id);",
 									"",
 									"count = postman.getEnvironmentVariable(\"count\");",
 									"count++;",
@@ -1327,7 +1327,7 @@
 									"tests[\"Status code is 200\"] = responseCode.code === 200;",
 									"tests[\"Response should not be 'do some magic!'\"] = responseBody != \"do some magic!\";",
 									"var jsonData = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"student_id\", jsonData);",
+									"postman.setEnvironmentVariable(\"student_id\", jsonData.message.student_id);",
 									""
 								],
 								"type": "text/javascript"
