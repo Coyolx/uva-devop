@@ -11,7 +11,7 @@ The folder is generated automatically from Swagger. Two options are available to
 ###### Option 1 - Local server
 _The tutorial explains it quite well._
 
-###### Option 2 - Containerised server
+###### Option 2 - Containerised server for the front-end
 ```sh
 docker build --tag goncaloj/student_service # "goncaloj" is my Docker username. Find your own (please).
 # Running it in dettached mode (-d) is optional.
@@ -20,4 +20,9 @@ docker run -it -p -d 8080:8080 goncaloj/student_service
 
 We should be able to access the UI in Swagger through `localhost`:
 http://localhost:8080/tutorial/1.0.0/ui/
+
+###### Option 3 - Containerised server using `docker-compose.yml` file with MongoDB
+```sh
+
+```
 
