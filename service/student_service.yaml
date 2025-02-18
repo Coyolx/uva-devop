@@ -38,8 +38,8 @@ spec:
       - env:
         - name: MONGO_URI
           value: mongodb://mongo:27017
-        image: nginx
-        name: service
+        image: goncaloferreirauva/student_service
+        name: student_service_pod
         imagePullPolicy: Always
         ports:
         - containerPort: 8080

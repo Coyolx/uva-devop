@@ -23,6 +23,6 @@ http://localhost:8080/tutorial/1.0.0/ui/
 
 ###### Option 3 - Containerised server using `docker-compose.yml` file with MongoDB
 ```sh
-
+docker compose up --build -d
 ```
 

@@ -1,56 +1,18 @@
-# Version is deprecated
 # version: '3'
-
 services:
-  nginx:
-    image: nginx
-    restart: unless-stopped
-    depends_on:
-      - backend
-      - frontend
-    ports:
-      - "80:80"
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
-    networks:
-      - app_network
-
-  backend:
-    image: goncaloj/student_service
+  student_service:
+    # image: nginx
+    image: goncaloferreirauva/student_service:latest
     restart: unless-stopped
     depends_on:
       - mongo
     environment:
-      MONGO_URI: mongodb://mongo:27017/student_db
+      MONGO_URI: mongodb://mongo:27017
     ports:
-      - "5000:5000"
-    volumes:
-      - ./data/mongodb:/data/db
-    networks:
-      - app_network
-
-  frontend:
-    build: ./frontend
-    restart: unless-stopped
-    depends_on:
-      - backend
-    ports:
-      - "8080:80"
-    networks:
-      - app_network
+      - "8080:8080"
 
   mongo:
-    image: mongo:4
     restart: unless-stopped
+    image: mongo:4
     ports:
       - "27017:27017"
-    volumes:
-      - mongo_data:/data/db
-    networks:
-      - app_network
-
-volumes:
-  mongo_data:
-
-networks:
-  app_network:
