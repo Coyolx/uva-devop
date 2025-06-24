@@ -1,7 +1,7 @@
 name: Build Test and push       
 on: [push]  
 env:
-  IMAGE_NAME: student_service   
+  IMAGE_NAME: student_service    
   REPO_NAME: goncaloferreirauva # or goncaloj  
 
 jobs:
