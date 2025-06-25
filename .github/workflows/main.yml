@@ -31,7 +31,7 @@ jobs:
         environment: postman/environment.json
         reporters: cli
         bail: true
-
+ 
     - name: Check if we failed
       id: fail-check
       shell: bash
