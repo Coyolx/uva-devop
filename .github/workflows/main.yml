@@ -3,7 +3,7 @@ on: [push]
 env:
   IMAGE_NAME: student_service    
   REPO_NAME: goncaloferreirauva # or goncaloj  
-
+ 
 jobs:
   build:
     runs-on: ubuntu-latest 
