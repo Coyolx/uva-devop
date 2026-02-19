@@ -1,6 +1,7 @@
 name: Build Test and push           
 on: [push]         
-env:     
+env:      defaults:
+  
   IMAGE_NAME: student_service        
   REPO_NAME: goncaloferreirauva # or goncaloj                 
  
